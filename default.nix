@@ -29,6 +29,8 @@ let
 
     fastqc = callPackage ./pkgs/applications/fastqc {};
 
+    mrsfast = callPackage ./pkgs/applications/mrsfast {};
+
     
     # libraries
     
