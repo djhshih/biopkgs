@@ -31,6 +31,8 @@ let
 
     mrsfast = callPackage ./pkgs/applications/mrsfast {};
 
+    muscle = callPackage ./pkgs/applications/muscle {};
+
     
     # libraries
     
