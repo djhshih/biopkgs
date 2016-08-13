@@ -33,6 +33,8 @@ let
 
     muscle = callPackage ./pkgs/applications/muscle {};
 
+    rsem = callPackage ./pkgs/applications/rsem {};
+
     
     # libraries
     
