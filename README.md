@@ -20,7 +20,7 @@ framework facilitates code compilation across Unix-like platforms.
 
 ## Requirement
 
-- (Nix)[https://nixos.org/nix/download.html]
+- [Nix][https://nixos.org/nix/download.html]
 
 
 ## Installation
