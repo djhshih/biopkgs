@@ -35,6 +35,8 @@ let
 
     rsem = callPackage ./pkgs/applications/rsem {};
 
+    samtools = callPackage ./pkgs/applications/samtools {};
+
     
     # libraries
     

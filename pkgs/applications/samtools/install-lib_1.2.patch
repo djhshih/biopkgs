@@ -1,0 +1,25 @@
+diff -ubr samtools-1.2/Makefile samtools-1.2-install-lib-patch/Makefile
+--- samtools-1.2/Makefile	2015-02-03 11:27:34.000000000 -0500
++++ samtools-1.2-install-lib-patch/Makefile	2015-07-17 14:46:20.712506671 -0400
+@@ -42,6 +42,8 @@
+ prefix      = /usr/local
+ exec_prefix = $(prefix)
+ bindir      = $(exec_prefix)/bin
++libdir      = $(prefix)/lib
++includedir  = $(prefix)/include/bam
+ mandir      = $(prefix)/share/man
+ man1dir     = $(mandir)/man1
+ 
+@@ -268,9 +270,11 @@
+ 
+ 
+ install: $(PROGRAMS) $(BUILT_MISC_PROGRAMS)
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir)
++	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+ 	$(INSTALL_PROGRAM) $(PROGRAMS) $(MISC_PROGRAMS) $(DESTDIR)$(bindir)
+ 	$(INSTALL_DATA) samtools.1 $(DESTDIR)$(man1dir)
++	$(INSTALL_DATA) libbam.a $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) *.h $(DESTDIR)$(includedir)
+ 
+ 
+ testclean:

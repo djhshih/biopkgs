@@ -1,0 +1,24 @@
+--- samtools-1.3.1/Makefile	2016-06-18 21:42:54.701278664 -0400
++++ samtools-1.3.1-install-lib-patch/Makefile	2016-06-18 21:48:55.244599113 -0400
+@@ -41,6 +41,8 @@
+ prefix      = /usr/local
+ exec_prefix = $(prefix)
+ bindir      = $(exec_prefix)/bin
++libdir      = $(prefix)/lib
++includedir  = $(prefix)/include/bam
+ datarootdir = $(prefix)/share
+ mandir      = $(datarootdir)/man
+ man1dir     = $(mandir)/man1
+@@ -280,9 +282,11 @@
+ 
+ 
+ install: $(PROGRAMS) $(BUILT_MISC_PROGRAMS)
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir)
++	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+ 	$(INSTALL_PROGRAM) $(PROGRAMS) $(MISC_PROGRAMS) $(DESTDIR)$(bindir)
+ 	$(INSTALL_DATA) samtools.1 misc/wgsim.1 $(DESTDIR)$(man1dir)
++	$(INSTALL_DATA) libbam.a $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) *.h $(DESTDIR)$(includedir)
+ 
+ 
+ testclean:
