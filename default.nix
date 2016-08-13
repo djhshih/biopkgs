@@ -39,6 +39,8 @@ let
 
     sickle = callPackage ./pkgs/applications/sickle {};
 
+    star = callPackage ./pkgs/applications/star {};
+
     
     # libraries
     
