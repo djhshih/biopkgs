@@ -17,6 +17,8 @@ let
 
     bedtools = callPackage ./pkgs/applications/bedtools {};
 
+    bismark = callPackage ./pkgs/applications/bismark {};
+
     
     # libraries
     
