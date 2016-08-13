@@ -21,6 +21,8 @@ let
 
     bowtie2 = callPackage ./pkgs/applications/bowtie2 {};
 
+    bwa = callPackage ./pkgs/applications/bwa {};
+
     
     # libraries
     
