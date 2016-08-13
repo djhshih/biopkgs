@@ -13,6 +13,8 @@ let
 
     bamtools = callPackage ./pkgs/applications/bamtools {};
 
+    bcftools = callPackage ./pkgs/applications/bcftools {};
+
     
     # libraries
     
