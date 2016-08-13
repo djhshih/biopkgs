@@ -1,0 +1,14 @@
+diff -ubr express-1.5.1-src/CMakeLists.txt express-1.5.1-src-boost-patch/CMakeLists.txt
+--- express-1.5.1-src/CMakeLists.txt	2013-12-08 14:09:18.000000000 -0500
++++ express-1.5.1-src-boost-patch/CMakeLists.txt	2015-07-19 15:00:11.536696666 -0400
+@@ -13,9 +13,8 @@
+ set(CMAKE_CXX_FLAGS_MINSIZEREL "-Os ${CMAKE_CXX_FLAGS}")
+ 
+ set(CMAKE_BUILD_TYPE Release)
+-set(Boost_USE_STATIC_LIBS ON)
+ 
+-find_package(Boost 1.39
++find_package(Boost
+     COMPONENTS
+         thread
+    	system

@@ -25,6 +25,8 @@ let
 
     emu = callPackage ./pkgs/applications/emu {};
 
+    express = callPackage ./pkgs/applications/express {};
+
     
     # libraries
     
