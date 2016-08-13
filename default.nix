@@ -37,6 +37,8 @@ let
 
     samtools = callPackage ./pkgs/applications/samtools {};
 
+    sickle = callPackage ./pkgs/applications/sickle {};
+
     
     # libraries
     
