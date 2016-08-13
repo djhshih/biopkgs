@@ -45,6 +45,8 @@ let
 
     
     # libraries
+
+    htslib = callPackage ./pkgs/libraries/htslib {};
     
 
   };
