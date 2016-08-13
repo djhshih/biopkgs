@@ -27,6 +27,8 @@ let
 
     express = callPackage ./pkgs/applications/express {};
 
+    fastqc = callPackage ./pkgs/applications/fastqc {};
+
     
     # libraries
     
