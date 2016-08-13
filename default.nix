@@ -15,6 +15,8 @@ let
 
     bcftools = callPackage ./pkgs/applications/bcftools {};
 
+    bedtools = callPackage ./pkgs/applications/bedtools {};
+
     
     # libraries
     
