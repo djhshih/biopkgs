@@ -39,6 +39,8 @@ let
 
     sickle = callPackage ./pkgs/applications/sickle {};
 
+    snowtools = callPackage ./pkgs/applications/snowtools {};
+
     star = callPackage ./pkgs/applications/star {};
 
     vcftools = callPackage ./pkgs/applications/vcftools {};
