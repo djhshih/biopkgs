@@ -11,6 +11,7 @@ let
     
     # applications
 
+    bamtools = callPackage ./pkgs/applications/bamtools {};
 
     
     # libraries
