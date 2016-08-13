@@ -41,6 +41,8 @@ let
 
     star = callPackage ./pkgs/applications/star {};
 
+    vcftools = callPackage ./pkgs/applications/vcftools {};
+
     
     # libraries
     

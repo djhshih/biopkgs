@@ -1,0 +1,272 @@
+diff -ubr vcftools_0.1.12b/perl/fill-aa vcftools_0.1.12b-findbin-patch/perl/fill-aa
+--- vcftools_0.1.12b/perl/fill-aa	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/fill-aa	2015-07-24 00:48:22.601867001 -0400
+@@ -8,10 +8,10 @@
+ 
+ use strict;
+ use warnings;
+-use Carp;
+-use Vcf;
+ use FindBin;
+ use lib "$FindBin::Bin";
++use Carp;
++use Vcf;
+ use FaSlice;
+ 
+ my $opts = parse_params();
+diff -ubr vcftools_0.1.12b/perl/fill-an-ac vcftools_0.1.12b-findbin-patch/perl/fill-an-ac
+--- vcftools_0.1.12b/perl/fill-an-ac	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/fill-an-ac	2015-07-24 00:49:20.700902002 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/fill-fs vcftools_0.1.12b-findbin-patch/perl/fill-fs
+--- vcftools_0.1.12b/perl/fill-fs	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/fill-fs	2015-07-24 00:49:37.212487002 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff -ubr vcftools_0.1.12b/perl/fill-ref-md5 vcftools_0.1.12b-findbin-patch/perl/fill-ref-md5
+--- vcftools_0.1.12b/perl/fill-ref-md5	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/fill-ref-md5	2015-07-24 00:49:57.936177000 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use IPC::Open2;
+ use Vcf;
+diff -ubr vcftools_0.1.12b/perl/tab-to-vcf vcftools_0.1.12b-findbin-patch/perl/tab-to-vcf
+--- vcftools_0.1.12b/perl/tab-to-vcf	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/tab-to-vcf	2015-07-24 00:50:11.803107001 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff -ubr vcftools_0.1.12b/perl/vcf-annotate vcftools_0.1.12b-findbin-patch/perl/vcf-annotate
+--- vcftools_0.1.12b/perl/vcf-annotate	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-annotate	2015-07-24 00:50:46.533796999 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-compare vcftools_0.1.12b-findbin-patch/perl/vcf-compare
+--- vcftools_0.1.12b/perl/vcf-compare	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-compare	2015-07-24 00:51:08.368042000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff -ubr vcftools_0.1.12b/perl/vcf-concat vcftools_0.1.12b-findbin-patch/perl/vcf-concat
+--- vcftools_0.1.12b/perl/vcf-concat	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-concat	2015-07-24 00:51:13.190452000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-consensus vcftools_0.1.12b-findbin-patch/perl/vcf-consensus
+--- vcftools_0.1.12b/perl/vcf-consensus	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-consensus	2015-07-24 00:51:19.093402001 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-contrast vcftools_0.1.12b-findbin-patch/perl/vcf-contrast
+--- vcftools_0.1.12b/perl/vcf-contrast	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-contrast	2015-07-24 00:51:29.892132000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-convert vcftools_0.1.12b-findbin-patch/perl/vcf-convert
+--- vcftools_0.1.12b/perl/vcf-convert	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-convert	2015-07-24 00:51:41.187777001 -0400
+@@ -2,10 +2,10 @@
+ 
+ use strict;
+ use warnings;
+-use Carp;
+-use Vcf;
+ use FindBin;
+ use lib "$FindBin::Bin";
++use Carp;
++use Vcf;
+ use FaSlice;
+ 
+ my $opts = parse_params();
+diff -ubr vcftools_0.1.12b/perl/vcf-fix-ploidy vcftools_0.1.12b-findbin-patch/perl/vcf-fix-ploidy
+--- vcftools_0.1.12b/perl/vcf-fix-ploidy	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-fix-ploidy	2015-07-24 00:52:24.212612000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-indel-stats vcftools_0.1.12b-findbin-patch/perl/vcf-indel-stats
+--- vcftools_0.1.12b/perl/vcf-indel-stats	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-indel-stats	2015-07-24 00:52:30.172257002 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-isec vcftools_0.1.12b-findbin-patch/perl/vcf-isec
+--- vcftools_0.1.12b/perl/vcf-isec	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-isec	2015-07-24 00:52:36.832252000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-merge vcftools_0.1.12b-findbin-patch/perl/vcf-merge
+--- vcftools_0.1.12b/perl/vcf-merge	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-merge	2015-07-24 00:52:41.761381999 -0400
+@@ -6,6 +6,8 @@
+ use strict;
+ use warnings;
+ use Carp;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Vcf;
+ 
+ my $opts = parse_params();
+diff -ubr vcftools_0.1.12b/perl/vcf-phased-join vcftools_0.1.12b-findbin-patch/perl/vcf-phased-join
+--- vcftools_0.1.12b/perl/vcf-phased-join	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-phased-join	2015-07-24 00:52:46.907287000 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-query vcftools_0.1.12b-findbin-patch/perl/vcf-query
+--- vcftools_0.1.12b/perl/vcf-query	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-query	2015-07-24 00:52:52.483406999 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-shuffle-cols vcftools_0.1.12b-findbin-patch/perl/vcf-shuffle-cols
+--- vcftools_0.1.12b/perl/vcf-shuffle-cols	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-shuffle-cols	2015-07-24 00:53:00.557442001 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-stats vcftools_0.1.12b-findbin-patch/perl/vcf-stats
+--- vcftools_0.1.12b/perl/vcf-stats	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-stats	2015-07-24 00:53:13.327157000 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use VcfStats;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-subset vcftools_0.1.12b-findbin-patch/perl/vcf-subset
+--- vcftools_0.1.12b/perl/vcf-subset	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-subset	2015-07-24 00:53:18.553101999 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-to-tab vcftools_0.1.12b-findbin-patch/perl/vcf-to-tab
+--- vcftools_0.1.12b/perl/vcf-to-tab	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-to-tab	2015-07-24 00:53:25.373177003 -0400
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff -ubr vcftools_0.1.12b/perl/vcf-validator vcftools_0.1.12b-findbin-patch/perl/vcf-validator
+--- vcftools_0.1.12b/perl/vcf-validator	2014-08-01 15:11:22.000000000 -0400
++++ vcftools_0.1.12b-findbin-patch/perl/vcf-validator	2015-07-24 00:53:41.718012001 -0400
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use IPC::Open3 'open3';
