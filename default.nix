@@ -19,6 +19,8 @@ let
 
     bismark = callPackage ./pkgs/applications/bismark {};
 
+    bowtie2 = callPackage ./pkgs/applications/bowtie2 {};
+
     
     # libraries
     
