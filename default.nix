@@ -23,6 +23,8 @@ let
 
     bwa = callPackage ./pkgs/applications/bwa {};
 
+    emu = callPackage ./pkgs/applications/emu {};
+
     
     # libraries
     
