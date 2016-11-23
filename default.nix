@@ -45,6 +45,8 @@ let
 
     vcftools = callPackage ./pkgs/applications/vcftools {};
 
+    genomic = callPackage ./pkgs/applications/genomic {};
+
     
     # libraries
 
