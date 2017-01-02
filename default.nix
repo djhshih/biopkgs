@@ -49,6 +49,8 @@ let
 
     bfast = callPackage ./pkgs/applications/bfast {};
 
+    blat = callPackage ./pkgs/applications/blat {};
+
     
     # libraries
 
