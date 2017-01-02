@@ -47,6 +47,8 @@ let
 
     genomic = callPackage ./pkgs/applications/genomic {};
 
+    bfast = callPackage ./pkgs/applications/bfast {};
+
     
     # libraries
 
