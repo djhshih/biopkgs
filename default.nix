@@ -45,6 +45,12 @@ let
 
     vcftools = callPackage ./pkgs/applications/vcftools {};
 
+    genomic = callPackage ./pkgs/applications/genomic {};
+
+    bfast = callPackage ./pkgs/applications/bfast {};
+
+    blat = callPackage ./pkgs/applications/blat {};
+
     
     # libraries
 
