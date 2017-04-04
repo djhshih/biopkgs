@@ -53,6 +53,8 @@ let
 
     sga = callPackage ./pkgs/applications/sga {};
 
+    abyss = callPackage ./pkgs/applications/abyss {};
+
     
     # libraries
 
