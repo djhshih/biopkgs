@@ -51,6 +51,8 @@ let
 
     blat = callPackage ./pkgs/applications/blat {};
 
+    sga = callPackage ./pkgs/applications/sga {};
+
     bwtool = callPackage ./pkgs/applications/bwtool {};
 
     
