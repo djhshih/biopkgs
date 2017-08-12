@@ -51,10 +51,14 @@ let
 
     blat = callPackage ./pkgs/applications/blat {};
 
+    bwtool = callPackage ./pkgs/applications/bwtool {};
+
     
     # libraries
 
     htslib = callPackage ./pkgs/libraries/htslib {};
+
+    beato = callPackage ./pkgs/libraries/beato {};
     
 
   };
