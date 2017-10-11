@@ -55,6 +55,8 @@ let
 
     bwtool = callPackage ./pkgs/applications/bwtool {};
 
+    samblaster = callPackage ./pkgs/applications/samblaster {};
+
     
     # libraries
 
