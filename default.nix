@@ -57,6 +57,8 @@ let
 
     samblaster = callPackage ./pkgs/applications/samblaster {};
 
+    sambamba = callPackage ./pkgs/applications/sambamba {};
+
     
     # libraries
 
