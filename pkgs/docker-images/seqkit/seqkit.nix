@@ -1,10 +1,11 @@
 let
   nixpkgs = import <nixpkgs> {};
-  
   biopkgs = import ../../../default.nix {};
+	coreImage = import ../core/core.nix;
 in
 nixpkgs.dockerTools.buildImage {
   name = "seqkit";
+	fromImage = coreImage;
   contents = [
     biopkgs.bwa
     biopkgs.samblaster
