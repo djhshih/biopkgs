@@ -59,13 +59,14 @@ let
 
     sambamba = callPackage ./pkgs/applications/sambamba {};
 
+		pairfq = callPackage ./pkgs/applications/pairfq {};
+
     
     # libraries
 
     htslib = callPackage ./pkgs/libraries/htslib {};
 
-    beato = callPackage ./pkgs/libraries/beato {};
-    
+    beato = callPackage ./pkgs/libraries/beato {}; 
 
   };
 in
