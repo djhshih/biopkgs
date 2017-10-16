@@ -1,7 +1,7 @@
 let
   nixpkgs = import <nixpkgs> {};
   biopkgs = import ../../../default.nix {};
-	coreImage = import ../core/core.nix;
+	coreImage = import ../core/default.nix;
 in
 nixpkgs.dockerTools.buildImage {
   name = "seqkit";
