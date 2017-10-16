@@ -13,7 +13,7 @@ image=$1
 cd $path/$image
 
 echo "Building docker image..."
-nix-build ${image}.nix
+nix-build
 
 echo "Loading docker image..."
 docker -i result
