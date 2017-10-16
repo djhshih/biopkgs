@@ -10,8 +10,9 @@ nixpkgs.dockerTools.buildImage {
     nixpkgs.coreutils
     nixpkgs.glibc
     nixpkgs.perl
-    nixpkgs.zlib
     nixpkgs.python
+		nixpkgs.zlib
+		nixpkgs.gzip
   ];
   # nixpkgs.gsl
   # nixpkgs.R depends on jdk!
