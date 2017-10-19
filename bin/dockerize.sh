@@ -1,10 +1,16 @@
 #!/bin/bash
 
+set -eu
+
 root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 path=${root}/../pkgs/docker-images
 
-if [[ $# < 1 ]]; then
-  echo "usage: ${0##*/} [image]"
+if (( $# < 1 )); then
+  echo "usage: ${0##*/} <image>"
+  echo ""
+  echo "Available images:"
+  echo ""
+  ls -1 $path
   exit 1
 fi
 
@@ -16,7 +22,7 @@ echo "Building docker image..."
 nix-build
 
 echo "Loading docker image..."
-docker -i result
+docker load -i result
 
 # commands to publish an image:
 
