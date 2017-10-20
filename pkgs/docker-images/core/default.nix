@@ -1,6 +1,5 @@
 let
   nixpkgs = import <nixpkgs> {};
-  
   biopkgs = import ../../../default.nix {};
 in
 nixpkgs.dockerTools.buildImage {
@@ -10,10 +9,10 @@ nixpkgs.dockerTools.buildImage {
     nixpkgs.coreutils
     nixpkgs.glibc
     nixpkgs.perl
-    nixpkgs.python
 		nixpkgs.zlib
 		nixpkgs.gzip
+		biopkgs.conkymon
   ];
-  # nixpkgs.gsl
+  # nixpkgs.python (adds 100MB)
   # nixpkgs.R depends on jdk!
 }
