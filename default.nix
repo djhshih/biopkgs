@@ -61,6 +61,11 @@ let
 
 		pairfq = callPackage ./pkgs/applications/pairfq {};
 
+		conkycli = callPackage ./pkgs/applications/conkycli {};
+
+		conkymon = callPackage ./pkgs/applications/conkymon {};
+
+
     
     # libraries
 
