@@ -65,6 +65,8 @@ let
 
 		conkymon = callPackage ./pkgs/applications/conkymon {};
 
+		dwgsim = callPackage ./pkgs/applications/dwgsim {};
+
 
     
     # libraries
