@@ -45,6 +45,11 @@ To install a package (e.g. samtools), run
 nix-env -f ~/biopkgs -i samtools
 ```
 
+## Docker images
+
+Nix scripts to build docker images are found in `pkgs/docker-images`. These
+images may be built using `bin/dockerize.sh`.
+
 
 ## See also
 
