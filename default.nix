@@ -67,6 +67,8 @@ let
 
 		dwgsim = callPackage ./pkgs/applications/dwgsim {};
 
+		rgsam = callPackage ./pkgs/applications/rgsam {};
+
 
     
     # libraries
