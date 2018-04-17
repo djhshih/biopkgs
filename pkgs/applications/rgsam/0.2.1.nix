@@ -1,14 +1,14 @@
 { stdenv, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
-  version = "0.1";
+  version = "0.2.1";
   name = "rgsam-${version}";
 
   src = fetchFromGitHub {
 		owner = "djhshih";
 		repo = "rgsam";
 		rev = "v${version}";
-		sha256 = "0f306vy94zhv6jjc1q81dqj6hsnin2izrdwbxnd0l7zl8sx7lsjw";
+		sha256 = "";
   };
 
 	installPhase = ''
