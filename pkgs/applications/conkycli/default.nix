@@ -1,10 +1,10 @@
-{ stdenv, fetchFromGitHub, pkgconfig, cmake, lua }:
+{ stdenv, fetchFromGitHub, pkgconfig, cmake, gcc48, lua }:
 
 with stdenv.lib;
 
 stdenv.mkDerivation rec {
   name = "conkycli-${version}";
-  version = "1.10.6";
+  version = "1.10.8";
 
   src = fetchFromGitHub {
     owner = "brndnmtthws";
@@ -21,8 +21,7 @@ stdenv.mkDerivation rec {
 
   NIX_LDFLAGS = "-lgcc_s";
 
-  nativeBuildInputs = [ pkgconfig ];
-  buildInputs = [ cmake lua ];
+  nativeBuildInputs = [ pkgconfig cmake lua gcc48 ];
 
   cmakeFlags = ""
     + "-DBUILD_X11=OFF "
