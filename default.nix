@@ -59,6 +59,8 @@ let
 
     sambamba = callPackage ./pkgs/applications/sambamba {};
 
+    sambamba-bin = callPackage ./pkgs/applications/sambamba-bin {};
+
 		pairfq = callPackage ./pkgs/applications/pairfq {};
 
 		conkycli = callPackage ./pkgs/applications/conkycli {};

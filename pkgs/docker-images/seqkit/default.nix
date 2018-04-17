@@ -9,11 +9,12 @@ nixpkgs.dockerTools.buildImage {
   contents = [
     biopkgs.bwa
     biopkgs.samblaster
-    biopkgs.sambamba
+    biopkgs.sambamba-bin
     biopkgs.samtools
     biopkgs.bcftools
     biopkgs.bedtools
     biopkgs.vcftools
     biopkgs.pairfq
+		biopkgs.rgsam
   ];
 }
