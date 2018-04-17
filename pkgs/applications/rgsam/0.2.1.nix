@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
 		owner = "djhshih";
 		repo = "rgsam";
 		rev = "v${version}";
-		sha256 = "11aqsf3xdbiw93zbj3r5rmpc1r9h7p25vks1y6p8xg73ybrax0gq";
+		sha256 = "1vvil2s5930l8k8jkhnkvx15hd5xp4pawi1277a106bx914ff3i0";
   };
 
 	installPhase = ''
