@@ -15,6 +15,6 @@ nixpkgs.dockerTools.buildImage {
     biopkgs.bedtools
     biopkgs.vcftools
     biopkgs.pairfq
-		biopkgs.rgsam
+    biopkgs.rgsam
   ];
 }
