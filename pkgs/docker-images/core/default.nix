@@ -8,11 +8,11 @@ nixpkgs.dockerTools.buildImage {
     nixpkgs.bash
     nixpkgs.coreutils
     nixpkgs.glibc
-		nixpkgs.zlib
-		nixpkgs.gzip
-		biopkgs.conkymon
+    nixpkgs.zlib
+    nixpkgs.gzip
+    biopkgs.conkymon
   ];
   # nixpkgs.perl
   # nixpkgs.python (adds 100MB)
   # nixpkgs.R depends on jdk!
-}
+
