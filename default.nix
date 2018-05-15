@@ -55,11 +55,30 @@ let
 
     abyss = callPackage ./pkgs/applications/abyss {};
 
+    bwtool = callPackage ./pkgs/applications/bwtool {};
+
+    samblaster = callPackage ./pkgs/applications/samblaster {};
+
+    sambamba = callPackage ./pkgs/applications/sambamba {};
+
+    sambamba-bin = callPackage ./pkgs/applications/sambamba-bin {};
+
+		pairfq = callPackage ./pkgs/applications/pairfq {};
+
+		conkycli = callPackage ./pkgs/applications/conkycli {};
+
+		conkymon = callPackage ./pkgs/applications/conkymon {};
+
+		dwgsim = callPackage ./pkgs/applications/dwgsim {};
+
+		rgsam = callPackage ./pkgs/applications/rgsam {};
+
     
     # libraries
 
     htslib = callPackage ./pkgs/libraries/htslib {};
-    
+
+    beato = callPackage ./pkgs/libraries/beato {}; 
 
   };
 in

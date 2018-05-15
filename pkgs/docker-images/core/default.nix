@@ -1,17 +1,18 @@
 let
   nixpkgs = import <nixpkgs> {};
-  
   biopkgs = import ../../../default.nix {};
 in
 nixpkgs.dockerTools.buildImage {
   name = "core";
   contents = [
+    nixpkgs.bash
     nixpkgs.coreutils
     nixpkgs.glibc
-    nixpkgs.perl
     nixpkgs.zlib
-    nixpkgs.python
+    nixpkgs.gzip
+    biopkgs.conkymon
   ];
-  # nixpkgs.gsl
+  # nixpkgs.perl
+  # nixpkgs.python (adds 100MB)
   # nixpkgs.R depends on jdk!
-}
+
