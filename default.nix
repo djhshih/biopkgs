@@ -63,16 +63,17 @@ let
 
     sambamba-bin = callPackage ./pkgs/applications/sambamba-bin {};
 
-		pairfq = callPackage ./pkgs/applications/pairfq {};
+    pairfq = callPackage ./pkgs/applications/pairfq {};
 
-		conkycli = callPackage ./pkgs/applications/conkycli {};
+    conkycli = callPackage ./pkgs/applications/conkycli {};
 
-		conkymon = callPackage ./pkgs/applications/conkymon {};
+    conkymon = callPackage ./pkgs/applications/conkymon {};
 
-		dwgsim = callPackage ./pkgs/applications/dwgsim {};
+    dwgsim = callPackage ./pkgs/applications/dwgsim {};
 
-		rgsam = callPackage ./pkgs/applications/rgsam {};
+    rgsam = callPackage ./pkgs/applications/rgsam {};
 
+    salmon = callPackage ./pkgs/applications/salmon {};
     
     # libraries
 
