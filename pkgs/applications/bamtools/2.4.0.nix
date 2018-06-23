@@ -18,7 +18,8 @@ stdenv.mkDerivation rec {
     sed 's|include/bamtools|include|g' -i src/ExportHeader.cmake
   '';
 
-  buildInputs = [ cmake zlib ];
+  nativeBuildInputs = [ cmake ];
+  buildInputs = [ zlib ];
 
   meta = with stdenv.lib; {
     description = "C++ API and command-line toolkit for working with BAM data";
