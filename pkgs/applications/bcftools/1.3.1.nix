@@ -9,9 +9,9 @@ stdenv.mkDerivation rec {
     sha256 = "095ry68vmz9q5s1scjsa698dhgyvgw5aicz24c19iwfbai07mhqj";
   };
 
-	prePatch = ''
-		sed s/-lcblas/-lgslcblas/g -i Makefile
-	'';
+  prePatch = ''
+    sed s/-lcblas/-lgslcblas/g -i Makefile
+  '';
 
   buildInputs = [ htslib zlib gsl perl ];
 

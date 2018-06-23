@@ -5,10 +5,10 @@ stdenv.mkDerivation rec {
   name = "samblaster-${version}";
 
   src = fetchFromGitHub {
-		owner = "GregoryFaust";
-		repo = "samblaster";
-		rev = "v.${version}";
-		sha256 = "0iv2ddfw8363vb2x8gr3p8g88whb6mb9m0pf71i2cqsbv6jghap7";
+    owner = "GregoryFaust";
+    repo = "samblaster";
+    rev = "v.${version}";
+    sha256 = "0iv2ddfw8363vb2x8gr3p8g88whb6mb9m0pf71i2cqsbv6jghap7";
   };
 
   installPhase = ''

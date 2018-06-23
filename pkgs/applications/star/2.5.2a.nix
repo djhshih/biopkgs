@@ -5,10 +5,10 @@ stdenv.mkDerivation rec {
   name = "star-${version}";
 
   src = fetchFromGitHub {
-		owner = "alexdobin";
-		repo = "STAR";
-		rev = "${version}";
-		sha256 = "0disn6zkq78dyq58zkc6qm4gyqs8kjpj8kwzls91w78hlwaffwcx";
+    owner = "alexdobin";
+    repo = "STAR";
+    rev = "${version}";
+    sha256 = "0disn6zkq78dyq58zkc6qm4gyqs8kjpj8kwzls91w78hlwaffwcx";
   };
 
   buildPhase = ''

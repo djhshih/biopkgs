@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   postPatch = ''
     sed -i -e '/include.*CheckIncludeFile)/i include(CheckIncludeFiles)' \
       cmake/ConkyPlatformChecks.cmake
-		sed -i -e 's/.set.RELEASE true./set(RELEASE true)/' cmake/Conky.cmake
+    sed -i -e 's/.set.RELEASE true./set(RELEASE true)/' cmake/Conky.cmake
   '';
 
   NIX_LDFLAGS = "-lgcc_s";

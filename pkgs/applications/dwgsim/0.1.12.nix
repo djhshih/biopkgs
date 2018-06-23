@@ -5,18 +5,18 @@ stdenv.mkDerivation rec {
   name = "dwgsim-${version}";
 
   src = fetchFromGitHub {
-		owner = "nh13";
-		repo = "dwgsim";
-		rev = "dwgsim.${version}";
-		sha256 = "10gsjnrf9c81321j9w04rjy0ah2adi4m1nlz6ya7lh5ixxnqi2h7";
-		fetchSubmodules = true;
+    owner = "nh13";
+    repo = "dwgsim";
+    rev = "dwgsim.${version}";
+    sha256 = "10gsjnrf9c81321j9w04rjy0ah2adi4m1nlz6ya7lh5ixxnqi2h7";
+    fetchSubmodules = true;
   };
 
-	nativeBuildInputs = [ zlib ncurses ];
+  nativeBuildInputs = [ zlib ncurses ];
 
-	prePatch = ''
-		sed -i -e 's/-lcurses/-lncurses/g' samtools/Makefile
-	'';
+  prePatch = ''
+    sed -i -e 's/-lcurses/-lncurses/g' samtools/Makefile
+  '';
 
   installPhase = ''
     mkdir -p $out/bin/

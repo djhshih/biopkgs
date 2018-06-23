@@ -26,8 +26,8 @@ stdenv.mkDerivation rec {
     mkdir -p $out/bin
     # install all executables
     install $(find . -name rsem-\* -maxdepth 1 -type f -perm -u+x) $out/bin
-		install convert-sam-for-rsem $out/bin
-		install extract-transcript-to-gene-map-from-trinity $out/bin
+    install convert-sam-for-rsem $out/bin
+    install extract-transcript-to-gene-map-from-trinity $out/bin
     install $(find EBSeq -name rsem-\* -maxdepth 1 -type f -perm -u+x) $out/bin
     install -m644 rsem_perl_utils.pm WHAT_IS_NEW $out/bin
   '';

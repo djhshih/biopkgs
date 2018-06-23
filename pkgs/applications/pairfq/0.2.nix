@@ -5,21 +5,16 @@ stdenv.mkDerivation rec {
   name = "pairfq-${version}";
 
   src = fetchFromGitHub {
-		owner = "djhshih";
-		repo = "pairfq";
-		rev = "v${version}";
-		sha256 = "1fs93p837d0rlw6fccbj73qngjw5yawcs6kfcfm3p7zrlb1gqvi1";
+    owner = "djhshih";
+    repo = "salmon";
+    rev = "v${version}";
+    sha256 = "a605771d14b804cfd85bc3796890ba9afee0857518e2e52ae09b6c28c58e72f6";
   };
 
-  installPhase = ''
-    mkdir -p $out/bin/
-    install $(find . -maxdepth 1 -type f -perm -u+x) $out/bin/
-  '';
-
   meta = with stdenv.lib; {
-    description = "Pair first-read and second-read fastq files togehter, separating unpaired reads";
+    description = "Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads using lightweight alignments";
     license     = licenses.gpl3;
-    homepage    = "https://github.com/djhshih/pairfq"; 
+    homepage    = "https://github.com/COMBINE-lab/salmon"; 
     platforms   = platforms.unix;
   };
 }

@@ -13,11 +13,11 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ conkycli ];
 
-	postPatch = ''
-		sed -i -e 's/conky -c/@conky@ -c/' conkymon
-		substituteInPlace conkymon \
-			--subst-var-by conky "${conkycli}/bin/conky"
-	'';
+  postPatch = ''
+    sed -i -e 's/conky -c/@conky@ -c/' conkymon
+    substituteInPlace conkymon \
+      --subst-var-by conky "${conkycli}/bin/conky"
+  '';
 
   installPhase = ''
     mkdir -p $out/bin/

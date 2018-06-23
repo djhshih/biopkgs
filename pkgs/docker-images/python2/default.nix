@@ -6,6 +6,6 @@ nixpkgs.dockerTools.buildImage {
   name = "python2";
   fromImage = coreImage;
   contents = [
-		nixpkgs.python2
+    nixpkgs.python2
   ];
 }
