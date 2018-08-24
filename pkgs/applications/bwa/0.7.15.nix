@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "lh3";
     repo = "bwa";
-    rev = "v${version}";
+    rev = "ref/tags/v${version}";
     sha256 = "1aasdr3lik42gafi9lds7xw0wgv8ijjll1g32d7jm04pp235c7nl";
   };
 
