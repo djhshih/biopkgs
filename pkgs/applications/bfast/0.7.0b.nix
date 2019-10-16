@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/djhshih/bfast/archive/v${version}.tar.gz";
-    sha256 = "10h0kqvrkh2avabr5l8f9hzw3yxzmvnqzf8m1v898r4axf2mks6x";
+    sha256 = "1km8b42zr3y12acr2gygcqyb3m6bm8yajfil0yif9s6q7ccnz934";
   };
 
   buildInputs = [ cmake zlib bzip2 ];
