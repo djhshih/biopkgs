@@ -1,22 +1,15 @@
 { stdenv, fetchFromGitHub, cmake, pkgconfig, curl, unzip, zlib, lzma, bzip2, tbb, jemalloc }:
 
 stdenv.mkDerivation rec {
-  version = "0.10.2";
+  version = "0.11.2";
   name = "salmon-${version}";
 
   src = fetchFromGitHub {
     owner = "COMBINE-lab";
     repo = "salmon";
-    rev = "ref/tags/v${version}";
-    sha256 = "18s2q7hwa6l8q9czdalpln3mra0afvw2c042q8259zy19yc1rhbg";
+    rev = "refs/tags/v${version}";
+    sha256 = "188m8s7s1j5xbdv9gbg6qra059diba54p6rvxp1v836l7bqv802z";
   };
-
-#  configurePhase = ''
-#    cmake \
-#      -DFETCH_BOOST=TRUE
-    #  -DBOOST_INCLUDEDIR=${boost.dev}/include \
-    #  -DBOOST_LIBRARYDIR=${boost.out}/lib
-#  '';
 
   nativeBuildInputs = [ cmake pkgconfig curl unzip ];
   buildInputs = [ zlib lzma bzip2 tbb jemalloc ];
