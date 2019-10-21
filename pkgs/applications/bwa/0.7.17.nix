@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
   meta = with stdenv.lib; {
     description = "Burrow-Wheeler Aligner for pairwise alignment between DNA sequences";
     license     = licenses.gpl3;
-    homepage    = "http://bowtie-bio.sourceforge.net/bowtie2"; 
+    homepage    = "https://github.com/lh3/bwa"; 
     platforms   = platforms.unix;
   };
 }
