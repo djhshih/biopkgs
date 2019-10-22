@@ -23,6 +23,8 @@ let
 
     bwa = callPackage ./pkgs/applications/bwa {};
 
+    fem = callPackage ./pkgs/applications/fem {};
+
     emu = callPackage ./pkgs/applications/emu {};
 
     express = callPackage ./pkgs/applications/express {};
