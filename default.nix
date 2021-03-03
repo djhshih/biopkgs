@@ -75,7 +75,9 @@ let
 
     rgsam = callPackage ./pkgs/applications/rgsam {};
 
-    salmon = callPackage ./pkgs/applications/salmon {};
+    salmon = callPackage ./pkgs/applications/salmon {
+        stdenv = nixpkgs.gcc7Stdenv;
+    };
     
     # libraries
 
