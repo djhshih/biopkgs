@@ -1,0 +1,31 @@
+diff --git a/Makefile b/Makefile
+index b24fffc..987f8c7 100644
+--- a/Makefile
++++ b/Makefile
+@@ -55,6 +55,8 @@ bindir      = $(exec_prefix)/bin
+ datarootdir = $(prefix)/share
+ mandir      = $(datarootdir)/man
+ man1dir     = $(mandir)/man1
++libdir      = $(prefix)/lib
++includedir  = $(prefix)/include/bam
+ 
+ # Installation location for $(MISC_PROGRAMS) and $(MISC_SCRIPTS)
+ misc_bindir = $(bindir)
+@@ -320,11 +322,13 @@ misc/maq2sam-long.o: misc/maq2sam.c config.h version.h
+ 
+ 
+ install: $(PROGRAMS) $(MISC_PROGRAMS)
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(misc_bindir) $(DESTDIR)$(man1dir)
++	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(misc_bindir) $(DESTDIR)$(man1dir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+ 	$(INSTALL_PROGRAM) $(PROGRAMS) $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) $(MISC_PROGRAMS) $(DESTDIR)$(misc_bindir)
+ 	$(INSTALL_SCRIPT) $(MISC_SCRIPTS) $(DESTDIR)$(misc_bindir)
+ 	$(INSTALL_MAN) doc/samtools*.1 misc/wgsim.1 $(DESTDIR)$(man1dir)
++	$(INSTALL_DATA) libbam.a $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) *.h $(DESTDIR)$(includedir)
+ 
+ 
+ testclean:
+-- 
+2.27.0
+
