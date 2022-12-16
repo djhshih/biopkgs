@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib }:
+{ lib, stdenv, fetchurl, zlib }:
 
 stdenv.mkDerivation rec {
   version = "1.33";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     install sickle $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Windowed adaptive trimming for FASTQ files using quality";
     license     = licenses.free;
     homepage    = "https://github.com/najoshi/sickle";

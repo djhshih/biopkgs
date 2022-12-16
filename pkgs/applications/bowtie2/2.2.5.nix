@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, unzip, which, inetutils, perl }:
+{ lib, stdenv, fetchurl, unzip, which, inetutils, perl }:
 
 stdenv.mkDerivation rec {
   version = "2.2.5";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     install -m644 MANUAL $out/share/bowtie2/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A fast and sensitive read aligner supporting gapped, local, and paired-end alignment";
     license     = licenses.gpl3;
     homepage    = "http://bowtie-bio.sourceforge.net/bowtie2"; 

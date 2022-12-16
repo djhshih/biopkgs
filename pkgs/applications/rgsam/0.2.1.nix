@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub }:
+{ lib, stdenv, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
   version = "0.2.1";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     make install DESTDIR=$out
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Infer read-group information from read names in SAM or FASTQ file";
     license     = licenses.gpl3;
     homepage    = "https://github.com/djhshih/rgsam"; 

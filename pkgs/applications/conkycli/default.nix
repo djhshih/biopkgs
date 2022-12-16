@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, pkgconfig, cmake, gcc48, lua }:
+{ lib, stdenv, fetchFromGitHub, pkgconfig, cmake, gcc48, lua }:
 
-with stdenv.lib;
+with lib;
 
 stdenv.mkDerivation rec {
   name = "conkycli-${version}";
@@ -45,7 +45,7 @@ stdenv.mkDerivation rec {
     + "-DBUILD_NVIDIA=OFF"
     ;
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = http://conky.sourceforge.net/;
     description = "Advanced, highly configurable system monitor based on torsmo";
     maintainers = [ maintainers.guibert ];

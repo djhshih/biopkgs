@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, ncurses, perl }:
+{ lib, stdenv, fetchurl, zlib, ncurses, perl }:
 
 stdenv.mkDerivation rec {
   version = "1.2.20";
@@ -32,7 +32,7 @@ stdenv.mkDerivation rec {
     install -m644 rsem_perl_utils.pm WHAT_IS_NEW $out/bin
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Accurate quantification of gene and isoform expression from RNA-seq data";
     license     = licenses.gpl3;
     homepage    = "https://github.com/deweylab/RSEM"; 

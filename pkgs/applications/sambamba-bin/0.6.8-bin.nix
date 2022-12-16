@@ -1,4 +1,4 @@
-{ stdenv, fetchurl }:
+{ lib, stdenv, fetchurl }:
 
 stdenv.mkDerivation rec {
   version = "0.6.8";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     cp sambamba* $out/bin/sambamba
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Tools for working with SAM/BAM data";
     license     = licenses.gpl2;
     homepage    = "https://github.com/lomereiter/sambamba"; 

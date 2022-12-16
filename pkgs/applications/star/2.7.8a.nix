@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, zlib, vim }:
+{ lib, stdenv, fetchFromGitHub, zlib, vim }:
 
 stdenv.mkDerivation rec {
   version = "2.7.8a";
@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
     install -Dm644 ../doc/STARmanual.pdf $out/share/star/manual.pdf
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Spliced Transcripts Alignment to a Reference for RNA-seq";
     license     = licenses.gpl3;
     homepage    = "https://github.com/alexdobin/STAR"; 

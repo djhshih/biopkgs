@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, groff }:
+{ lib, stdenv, fetchurl, zlib, groff }:
 
 stdenv.mkDerivation rec {
   version = "3.3.7";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     install $(find . -maxdepth 1 -type f -perm -u+x) $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Micro-read substitution-only fast alignment search tool";
     license     = licenses.free;
     homepage    = "http://sfu-compbio.github.io/mrsfast";

@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub }:
+{ lib, stdenv, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
   version = "0.1.24";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     install $(find . -maxdepth 1 -type f -perm -u+x) $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A tool to mark duplicates and extract discordant and split reads from sam files";
     license     = licenses.mit;
     homepage    = "https://github.com/GregoryFaust/samblaster"; 

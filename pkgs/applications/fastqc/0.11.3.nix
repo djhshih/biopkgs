@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, unzip, perl }:
+{ lib, stdenv, fetchurl, unzip, perl }:
 
 stdenv.mkDerivation rec {
   version = "0.11.3";
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     cp -r Help $out/fastqc/share/help
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A quality control application for high-throughput sequence data";
     license     = licenses.gpl3;
     homepage    = "http://www.bioinformatics.babraham.ac.uk/projects/fastqc"; 

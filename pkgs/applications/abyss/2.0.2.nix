@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, automake, autoconf, boost, openmpi, sparsehash, sqlite }:
+{ lib, stdenv, fetchurl, automake, autoconf, boost, openmpi, sparsehash, sqlite }:
 
 stdenv.mkDerivation rec {
   version = "2.0.2";
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ automake autoconf boost openmpi sparsehash sqlite ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "De novo genome sequence assembler to assemble large genomes using short reads";
     license     = licenses.gpl3;
     homepage    = "https://github.com/bcgsc/abyss"; 

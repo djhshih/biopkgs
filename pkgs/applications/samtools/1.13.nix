@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, bzip2, lzma, perl, ncurses }:
+{ lib, stdenv, fetchurl, zlib, bzip2, lzma, perl, ncurses }:
 
 stdenv.mkDerivation rec {
   version = "1.13";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     make prefix=$out install
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Tools for reading/writing/editing/indexing/viewing SAM/BAM/CRAM format";
     license     = licenses.free;
     homepage    = "http://www.htslib.org"; 
