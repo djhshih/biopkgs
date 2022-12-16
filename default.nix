@@ -78,6 +78,8 @@ let
     salmon = callPackage ./pkgs/applications/salmon {
         stdenv = nixpkgs.gcc7Stdenv;
     };
+
+    minimap2 = callPackage ./pkgs/applications/minimap2 {};
     
     # libraries
 
