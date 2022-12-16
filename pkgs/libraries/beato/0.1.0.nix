@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, libpng, openssl, htslib }:
+{ lib, stdenv, fetchurl, zlib, libpng, openssl, htslib }:
 
 stdenv.mkDerivation rec {
   version = "0.1.0";
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ zlib libpng openssl htslib ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Static library combining some HTS stuff, core wiggle stuff, Jim Kent's libary";
     license     = licenses.gpl3;
     platforms   = platforms.unix;

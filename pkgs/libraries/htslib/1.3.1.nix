@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, perl }:
+{ lib, stdenv, fetchurl, zlib, perl }:
 
 stdenv.mkDerivation rec {
   version = "1.3.1";
@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A C library for reading/writing high-throughput sequencing data";
     license     = licenses.free;
     platforms   = platforms.unix;
