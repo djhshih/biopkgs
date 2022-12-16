@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, cmake, zlib }:
+{ stdenv, fetchurl, cmake, zlib }:
 
 stdenv.mkDerivation rec {
   version = "2.4.0";
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake ];
   buildInputs = [ zlib ];
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "C++ API and command-line toolkit for working with BAM data";
     license     = licenses.mit;
     homepage    = "https://github.com/pezmaster31/bamtools"; 

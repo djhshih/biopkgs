@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, htslib, zlib, bzip2, lzma, curl, perl }:
+{ stdenv, fetchurl, htslib, zlib, bzip2, lzma, curl, perl }:
 
 stdenv.mkDerivation rec {
   version = "1.9";
@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
     install -D plugins/*.so $BCFTOOLS_PLUGINS
   '';
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "Tools for reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence variants";
     license     = licenses.free;
     homepage    = "http://www.htslib.org"; 

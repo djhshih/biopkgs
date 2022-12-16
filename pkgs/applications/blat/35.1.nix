@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, coreutils, libpng }:
+{ stdenv, fetchurl, coreutils, libpng }:
 
 stdenv.mkDerivation rec {
   version = "35.1";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ coreutils libpng ];
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "BLAST-Like Alignment Tool";
     license     = licenses.cc-by-nc-sa-40;
     homepage    = "https://genome.ucsc.edu/FAQ/FAQblat.html"; 

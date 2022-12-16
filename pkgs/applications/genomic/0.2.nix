@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, cmake, lua, boost, mesa_noglu, SDL, freetype, ftgl }:
+{ stdenv, fetchurl, cmake, lua, boost, mesa_noglu, SDL, freetype, ftgl }:
 
 stdenv.mkDerivation rec {
   version = "0.2";
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ cmake lua boost mesa_noglu SDL freetype ftgl ];
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "C++ toolkit for working with copy-number data";
     license     = licenses.gpl3;
     homepage    = "https://github.com/djhshih/genomic"; 

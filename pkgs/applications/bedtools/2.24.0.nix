@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, zlib }:
+{ stdenv, fetchurl, zlib }:
 
 stdenv.mkDerivation rec {
   version = "2.24.0";
@@ -25,7 +25,7 @@ stdenv.mkDerivation rec {
     make test
   '';
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "A swiss army knife for genome arithmetic";
     license     = licenses.gpl2;
     homepage    = "http://bedtools.readthedocs.org"; 

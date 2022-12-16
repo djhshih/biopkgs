@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, zlib }:
+{ stdenv, fetchurl, zlib }:
 
 stdenv.mkDerivation rec {
   version = "0.1.13";
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
     rm -r $out/bin/man1
   '';
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "A set of tools for working with VCF files";
     license     = licenses.lgpl3;
     homepage    = "http://vcftools.github.io"; 

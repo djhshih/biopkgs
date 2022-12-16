@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, perl }:
+{ stdenv, fetchurl, perl }:
 
 stdenv.mkDerivation rec {
   version = "0.14.3";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     install -m644 *.pdf $out/share/bismark
   '';
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "A bisulfite read mapper and methylation caller";
     license     = licenses.gpl3;
     homepage    = "http://www.bioinformatics.babraham.ac.uk/projects/bismark"; 

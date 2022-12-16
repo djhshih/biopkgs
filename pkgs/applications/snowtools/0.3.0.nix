@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, zlib, boost }:
+{ stdenv, fetchFromGitHub, zlib, boost }:
 
 stdenv.mkDerivation rec {
   version = "0.3.0";
@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ zlib boost ];
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "C++ htslib/bwa-mem interface for interrogating sequence data";
     license     = licenses.gpl3;
     homepage    = "https://github.com/jwalabroad/SnowTools"; 

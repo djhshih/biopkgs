@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, zlib }:
+{ stdenv, fetchurl, zlib }:
 
 stdenv.mkDerivation rec {
   version = "0.7.12";
@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     install -Dm644 bwa.1 $out/share/man/man1/bwa.1
   '';
 
-  meta = with lib; {
+  meta = with stdenv.lib; {
     description = "Burrow-Wheeler Aligner for pairwise alignment between DNA sequences";
     license     = licenses.gpl3;
     homepage    = "http://bowtie-bio.sourceforge.net/bowtie2"; 
