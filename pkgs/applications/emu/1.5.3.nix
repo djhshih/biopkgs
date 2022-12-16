@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, gsl }:
+{ lib, stdenv, fetchFromGitHub, gsl }:
 
 stdenv.mkDerivation rec {
   version = "1.5.3";
@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     DESTDIR=$out make install
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "An Expectation-Maximization algorithm to infer mutational signatures";
     license     = licenses.gpl3;
     homepage    = "https://github.com/djhshih/EMu"; 

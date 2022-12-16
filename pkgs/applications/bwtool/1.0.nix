@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, beato, htslib }:
+{ lib, stdenv, fetchurl, zlib, beato, htslib }:
 
 stdenv.mkDerivation rec {
   version = "1.0";
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ zlib beato htslib ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A tool for bigWig files";
     license     = licenses.gpl3;
     homepage    = "https://github.com/CRG-Barcelona/bwtool"; 

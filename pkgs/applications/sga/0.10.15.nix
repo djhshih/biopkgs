@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, automake, autoconf, zlib, bamtools, sparsehash, jemalloc }:
+{ lib, stdenv, fetchurl, automake, autoconf, zlib, bamtools, sparsehash, jemalloc }:
 
 stdenv.mkDerivation rec {
   version = "0.10.15";
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ automake autoconf zlib bamtools sparsehash jemalloc ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "De novo sequence assembler using string graphs";
     license     = licenses.gpl3;
     homepage    = "https://github.com/jts/sga"; 

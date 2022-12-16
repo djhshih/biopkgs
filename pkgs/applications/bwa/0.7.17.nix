@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, zlib }:
+{ lib, stdenv, fetchFromGitHub, zlib }:
 
 stdenv.mkDerivation rec {
   version = "0.7.17";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     install -Dm644 bwa.1 $out/share/man/man1/bwa.1
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Burrow-Wheeler Aligner for pairwise alignment between DNA sequences";
     license     = licenses.gpl3;
     homepage    = "https://github.com/lh3/bwa"; 

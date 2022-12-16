@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, zlib, ncurses }:
+{ lib, stdenv, fetchFromGitHub, zlib, ncurses }:
 
 stdenv.mkDerivation rec {
   version = "0.1.12";
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     install $(find . -maxdepth 1 -type f -perm -u+x) $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Whole genome simulator for next-generation sequencing";
     license     = licenses.gpl2;
     homepage    = "https://github.com/nh13/dwgsim"; 

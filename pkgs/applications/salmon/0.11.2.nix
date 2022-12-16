@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, cmake, pkgconfig, curl, unzip, zlib, lzma, bzip2, tbb, jemalloc }:
+{ lib, stdenv, fetchFromGitHub, cmake, pkgconfig, curl, unzip, zlib, lzma, bzip2, tbb, jemalloc }:
 
 stdenv.mkDerivation rec {
   version = "0.11.2";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   cmakeFlags = [ "-DFETCH_BOOST=TRUE" ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads using lightweight alignments";
     license     = licenses.gpl3;
     homepage    = "https://github.com/COMBINE-lab/salmon";

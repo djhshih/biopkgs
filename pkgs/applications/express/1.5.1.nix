@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, boost, cmake, zlib, protobuf, gperftools, bamtools }:
+{ lib, stdenv, fetchurl, boost, cmake, zlib, protobuf, gperftools, bamtools }:
 
 stdenv.mkDerivation rec {
   version = "1.5.1";
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ boost cmake zlib protobuf gperftools bamtools ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Streaming quantification for RNA-seq";
     license     = licenses.artistic2;
     homepage    = "http://bio.math.berkeley.edu/eXpress/"; 

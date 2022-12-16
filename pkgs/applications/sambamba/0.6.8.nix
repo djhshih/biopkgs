@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, zlib, ldc, which, python2 }:
+{ lib, stdenv, fetchurl, zlib, ldc, which, python2 }:
 
 stdenv.mkDerivation rec {
   version = "0.6.8";
@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
     install -Dm644 man/*.1 $out/share/man/man1/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Tools for working with SAM/BAM data";
     license     = licenses.gpl2;
     homepage    = "https://github.com/lomereiter/sambamba"; 

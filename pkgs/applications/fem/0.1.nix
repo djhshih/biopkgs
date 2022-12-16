@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub }:
+{ lib, stdenv, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
   version = "0.1";
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
     install $(find . -maxdepth 1 -type f -perm -u+x) $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A fast and efficient short read mapper";
     license     = licenses.gpl3;
     homepage    = "http://github.com/haowenz/FEM"; 

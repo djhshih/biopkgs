@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, glibc }:
+{ lib, stdenv, fetchurl, glibc }:
 
 stdenv.mkDerivation rec {
   version = "3.8.1551";
@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
     install muscle $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Multiple sequence alignment with high accuracy and high throughput";
     license     = licenses.publicDomain;
     homepage    = "http://www.drive5.com/muscle";

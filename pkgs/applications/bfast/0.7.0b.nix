@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, cmake, zlib, bzip2 }:
+{ lib, stdenv, fetchurl, cmake, zlib, bzip2 }:
 
 stdenv.mkDerivation rec {
   version = "0.7.0b";
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ cmake zlib bzip2 ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Blat-like Fast Accurate Search Tool";
     license     = licenses.gpl2;
     homepage    = "https://github.com/djhshih/bfast"; 

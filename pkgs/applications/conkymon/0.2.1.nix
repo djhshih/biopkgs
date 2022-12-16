@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, conkycli }:
+{ lib, stdenv, fetchFromGitHub, conkycli }:
 
 stdenv.mkDerivation rec {
   version = "0.2.1";
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
     install conkymon $out/bin
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "System monitoring with conky";
     license     = licenses.gpl3;
     homepage    = "https://github.com/djhshih/conkymon"; 
