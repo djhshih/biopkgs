@@ -21,7 +21,9 @@ let
 
     bowtie2 = callPackage ./pkgs/applications/bowtie2 {};
 
-    bwa = callPackage ./pkgs/applications/bwa {};
+    bwa = callPackage ./pkgs/applications/bwa {
+        stdenv = nixpkgs.gcc7Stdenv;
+    };
 
     fem = callPackage ./pkgs/applications/fem {};
 
