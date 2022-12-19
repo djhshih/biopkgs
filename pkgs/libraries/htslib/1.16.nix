@@ -1,12 +1,12 @@
-{ lib, stdenv, fetchurl, zlib, perl }:
+{ lib, stdenv, fetchurl, zlib, bzip2, xz, curl, perl }:
 
 stdenv.mkDerivation rec {
-  version = "1.3.1";
+  version = "1.16";
   name = "htslib-${version}";
 
   src = fetchurl {
     url = "https://github.com/samtools/htslib/releases/download/${version}/${name}.tar.bz2";
-    sha256 = "1rja282fwdc25ql6izkhdyh8ppw8x2fs0w0js78zgkmqjlikmma9";
+    sha256 = "093r1n4s134k50m9a925yn95gyi90ps5dlgc6gq4qwvkzxx7qsv0";
   };
 
   preBuild = ''
@@ -17,7 +17,9 @@ stdenv.mkDerivation rec {
     patchShebangs test/
   '';
 
-  buildInputs = [ zlib perl ];
+  nativeBuildInputs = [ perl ];
+
+  buildInputs = [ zlib bzip2 xz curl ];
 
   doCheck = true;
 

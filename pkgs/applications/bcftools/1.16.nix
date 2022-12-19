@@ -1,24 +1,31 @@
-{ lib, stdenv, fetchurl, htslib, zlib, bzip2, lzma, curl, perl }:
+{ lib, stdenv, fetchurl, htslib, zlib, bzip2, lzma, curl, perl, bash }:
 
 stdenv.mkDerivation rec {
-  version = "1.13";
+  version = "1.16";
   name = "bcftools-${version}";
 
   src = fetchurl {
     url = "https://github.com/samtools/bcftools/releases/download/${version}/${name}.tar.bz2";
-    sha256 = "140bscypyivq1r7iwi8nfpqzxcxgnjh4fshra7xaipay5bda3gqk";
+    sha256 = "1mpcla3rg0vlcnpdal7229qgsmz07n3qq1dq8fi117npk9y69gwh";
   };
 
-  prePatch = ''
-    sed s/-lcblas/-lgslcblas/g -i Makefile
+  preCheck = ''
+    patchShebangs misc/
+    patchShebangs test/
+    sed -ie 's|/bin/bash|${bash}/bin/bash|' test/test.pl
   '';
 
-  postPatch = ''
-    echo "patching Perl shebangs"
-    find . -name '*.pl' | xargs patchShebangs
-  '';
+  strictDeps = true;
 
-  buildInputs = [ htslib zlib bzip2 lzma curl perl ];
+  makeFlags = [
+    "HSTDIR=${htslib}"
+    "prefix=$(out)"
+    "CC=${stdenv.cc.targetPrefix}cc"
+  ];
+
+  nativeBuildInputs = [ perl curl ];
+
+  buildInputs = [ htslib zlib bzip2 lzma ];
 
   buildPhase = ''
     make
