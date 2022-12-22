@@ -82,12 +82,16 @@ let
     };
 
     minimap2 = callPackage ./pkgs/applications/minimap2 {};
+
+    fastp = callPackage ./pkgs/applications/fastp {};
     
     # libraries
 
     htslib = callPackage ./pkgs/libraries/htslib {};
 
     beato = callPackage ./pkgs/libraries/beato {}; 
+
+    libisal = callPackage ./pkgs/libraries/libisal {};
 
   };
 in
