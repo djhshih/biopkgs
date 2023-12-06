@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ zlib ];
 
   # patch the perl scripts so that they can find the local modules
-  patches = [ ./findbin.patch ];
+  patches = [ ./findbin_v0.1.12b.patch ];
 
   installPhase = ''
     install -Dm644 bin/man1/vcftools.1 $out/share/man/man1/vcftools.1
