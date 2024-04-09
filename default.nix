@@ -88,6 +88,7 @@ let
     # libraries
 
     htslib = callPackage ./pkgs/libraries/htslib {};
+    htslib13 = callPackage ./pkgs/libraries/htslib/1.3.1.nix {};
 
     beato = callPackage ./pkgs/libraries/beato {}; 
 

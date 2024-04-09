@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, zlib, beato, htslib }:
+{ lib, stdenv, fetchurl, zlib, beato, htslib13 }:
 
 stdenv.mkDerivation rec {
   version = "1.0";
@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     sha256 = "0jjr02a3b6lcx9m66fawqb919vsbq2yqhwp06wfrw4icc1rpa5rf";
   };
 
-  buildInputs = [ zlib beato htslib ];
+  buildInputs = [ zlib beato htslib13 ];
 
   meta = with lib; {
     description = "A tool for bigWig files";
