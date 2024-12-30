@@ -1,0 +1,260 @@
+diff --git a/src/perl/fill-an-ac b/src/perl/fill-an-ac
+index bd4a8ab..204146a 100755
+--- a/src/perl/fill-an-ac
++++ b/src/perl/fill-an-ac
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/fill-fs b/src/perl/fill-fs
+index 7e22288..13bf06d 100755
+--- a/src/perl/fill-fs
++++ b/src/perl/fill-fs
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff --git a/src/perl/fill-ref-md5 b/src/perl/fill-ref-md5
+index 34143da..f3eeb04 100755
+--- a/src/perl/fill-ref-md5
++++ b/src/perl/fill-ref-md5
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use IPC::Open2;
+ use Vcf;
+diff --git a/src/perl/tab-to-vcf b/src/perl/tab-to-vcf
+index b5f537f..5f590c1 100755
+--- a/src/perl/tab-to-vcf
++++ b/src/perl/tab-to-vcf
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff --git a/src/perl/vcf-annotate b/src/perl/vcf-annotate
+index fc3d06f..d85be49 100755
+--- a/src/perl/vcf-annotate
++++ b/src/perl/vcf-annotate
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-compare b/src/perl/vcf-compare
+index f459f9e..ed98455 100755
+--- a/src/perl/vcf-compare
++++ b/src/perl/vcf-compare
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use FaSlice;
+diff --git a/src/perl/vcf-concat b/src/perl/vcf-concat
+index 92771b0..7403894 100755
+--- a/src/perl/vcf-concat
++++ b/src/perl/vcf-concat
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-consensus b/src/perl/vcf-consensus
+index b09eeb3..ee5067f 100755
+--- a/src/perl/vcf-consensus
++++ b/src/perl/vcf-consensus
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-contrast b/src/perl/vcf-contrast
+index 729c90d..afe7bee 100755
+--- a/src/perl/vcf-contrast
++++ b/src/perl/vcf-contrast
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-fix-ploidy b/src/perl/vcf-fix-ploidy
+index 4fd380d..1bb7aff 100755
+--- a/src/perl/vcf-fix-ploidy
++++ b/src/perl/vcf-fix-ploidy
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-indel-stats b/src/perl/vcf-indel-stats
+index ae988ab..039fbd4 100755
+--- a/src/perl/vcf-indel-stats
++++ b/src/perl/vcf-indel-stats
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-isec b/src/perl/vcf-isec
+index 15e7bc1..df7a7d8 100755
+--- a/src/perl/vcf-isec
++++ b/src/perl/vcf-isec
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-merge b/src/perl/vcf-merge
+index a8b5714..7ddf16c 100755
+--- a/src/perl/vcf-merge
++++ b/src/perl/vcf-merge
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-phased-join b/src/perl/vcf-phased-join
+index 46eed49..6f5aeed 100755
+--- a/src/perl/vcf-phased-join
++++ b/src/perl/vcf-phased-join
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-query b/src/perl/vcf-query
+index 8dd8914..e382292 100755
+--- a/src/perl/vcf-query
++++ b/src/perl/vcf-query
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-shuffle-cols b/src/perl/vcf-shuffle-cols
+index b8557fc..bcd7a51 100755
+--- a/src/perl/vcf-shuffle-cols
++++ b/src/perl/vcf-shuffle-cols
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-stats b/src/perl/vcf-stats
+index 8a50943..ae8bb2e 100755
+--- a/src/perl/vcf-stats
++++ b/src/perl/vcf-stats
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use VcfStats;
+ 
+diff --git a/src/perl/vcf-subset b/src/perl/vcf-subset
+index cc44d12..b3ed0b1 100755
+--- a/src/perl/vcf-subset
++++ b/src/perl/vcf-subset
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-to-tab b/src/perl/vcf-to-tab
+index f788e1c..b98688d 100755
+--- a/src/perl/vcf-to-tab
++++ b/src/perl/vcf-to-tab
+@@ -2,6 +2,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ 
+diff --git a/src/perl/vcf-validator b/src/perl/vcf-validator
+index 0b468f0..ad277e6 100755
+--- a/src/perl/vcf-validator
++++ b/src/perl/vcf-validator
+@@ -5,6 +5,8 @@
+ 
+ use strict;
+ use warnings;
++use FindBin;
++use lib "$FindBin::Bin";
+ use Carp;
+ use Vcf;
+ use IPC::Open3 'open3';

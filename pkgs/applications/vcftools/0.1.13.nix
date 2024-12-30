@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ zlib ];
 
   # patch the perl scripts so that they can find the local modules
-  patches = [ ./findbin.patch ];
+  patches = [ ./findbin_v0.1.12b.patch ];
 
   preBuild = ''
     # fix version number

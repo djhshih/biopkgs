@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, zlib }:
+{ lib, stdenv, fetchurl, zlib, gcc48 }:
 
 stdenv.mkDerivation rec {
   version = "2.24.0";
@@ -9,6 +9,7 @@ stdenv.mkDerivation rec {
     sha256 = "1r30psa6djfwy5swslcnpf04hmp5hf6cjvfr9rfs3ib80iibhwza";
   };
 
+  nativeBuildInputs = [ gcc48 ];
   buildInputs = [ zlib ];
 
   preBuild = ''

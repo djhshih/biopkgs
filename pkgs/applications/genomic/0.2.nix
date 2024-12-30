@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, cmake, lua, boost, mesa_noglu, SDL, freetype, ftgl }:
+{ lib, stdenv, fetchurl, cmake, lua, boost, mesa, SDL, freetype, ftgl }:
 
 stdenv.mkDerivation rec {
   version = "0.2";
@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     sha256 = "0kml6dj8pimffphl819lirw7xnrl5f6cc2rx2n2fjbp86fvhylxy";
   };
 
-  buildInputs = [ cmake lua boost mesa_noglu SDL freetype ftgl ];
+  buildInputs = [ cmake lua boost mesa SDL freetype ftgl ];
 
   meta = with lib; {
     description = "C++ toolkit for working with copy-number data";
